@@ -11,6 +11,10 @@ var users = require('./routes/users');
 
 var app = express();
 
+mongoose.connect('mongodb+srv://mags4sats:PQJXytYAs2XVYFKI@cluster0-pkmmz.mongodb.net/mags4sats?authSource=admin&replicaSet=Cluster0-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true',{useNewUrlParser: true}, function (err) {
+   if (err) throw err;
+   console.log('Successfully connected');
+});
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
