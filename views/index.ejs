@@ -3,11 +3,10 @@
 <navbar>
   <% include /partials/navbar %>
 </navbar
-
     <div class="container-fluid">
       <div class="row">
         <% for(var i=0; i < products.length; i++) { %>
-        <div class="col">
+        <div class="col-sm-4 col-xs-1">
       <div class="card">
       <img src="<%= products[i].imagePath %>" class="card-img-top" alt="...">
       <div class="card-body">
@@ -15,8 +14,8 @@
         <b><%= products[i].price %> sats</b> <a href="#" class="btn btn-primary float-right">Rent</a>
       </div>
       </div>
-      <% }%>
       </div>
+      <% }%>
   </div>
   <footer>
     <% include /partials/footer %>

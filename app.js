@@ -11,7 +11,7 @@ var mags = require('./routes/mags');
 
 var app = express();
 
-mongoose.connect('mongodb://localhost:27017/shopping',{useNewUrlParser: true}, function (err) {
+mongoose.connect('mongodb+srv://mags4sats:PQJXytYAs2XVYFKI@cluster0-pkmmz.mongodb.net/mags4sats?authSource=admin&replicaSet=Cluster0-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true',{useNewUrlParser: true}, function (err) {
    if (err) throw err;
    console.log('Successfully connected');
 });
