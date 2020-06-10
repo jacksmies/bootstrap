@@ -7,11 +7,11 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
+var mags = require('./routes/mags');
 
 var app = express();
 
-mongoose.connect('mongodb+srv://mags4sats:PQJXytYAs2XVYFKI@cluster0-pkmmz.mongodb.net/mags4sats?authSource=admin&replicaSet=Cluster0-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true',{useNewUrlParser: true}, function (err) {
+mongoose.connect('mongodb://localhost:27017/shopping',{useNewUrlParser: true}, function (err) {
    if (err) throw err;
    console.log('Successfully connected');
 });
@@ -27,7 +27,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
+app.use('/mags', mags);
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
