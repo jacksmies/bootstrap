@@ -7,6 +7,16 @@
     <div class="container-fluid">
       <div class="row">
         <% for(var i=0; i < products.length; i++) { %>
+<<<<<<< HEAD
+      <div class="col-md-4 col-xs-1">
+        <div class="card">
+        <img src="<%= products[i].imagePath %>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text"><%= products[i].description %></p>
+          <b><%= products[i].price %> sats</b> <a href="#" class="btn btn-primary float-right">Rent</a>
+        </div>
+        </div>
+=======
         <div class="col-md-4 col-xs-1">
       <div class="card">
       <img src="<%= products[i].imagePath %>" class="card-img-top" alt="...">
@@ -14,6 +24,7 @@
         <p class="card-text"><%= products[i].description %></p>
         <b><%= products[i].price %> sats</b> <a href="#" class="btn btn-primary float-right">Rent</a>
       </div>
+>>>>>>> 01ca773d8fb28e00e77bf7f8dfd1c83941d3db6e
       </div>
       <% }%>
       </div>
